@@ -35,3 +35,6 @@ server {
         }
 }
 ```
+
+# Apache
+Apache does not have build in support for this. You can achieve a similar result by placing a simple php script or install a module to apache. 
