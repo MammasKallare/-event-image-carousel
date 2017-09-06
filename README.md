@@ -1,5 +1,5 @@
 # Event image carousel
-Event image carousel creates an carousel from images in a given folder.
+Event image carousel from a nginx autoindex json array.
 
 # Nginx
 Requires nginx version > `1.7.9`
