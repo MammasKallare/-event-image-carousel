@@ -43,6 +43,5 @@ function carousel(){
     setTimeout(carousel, 10000); // 10 seconds image, TODO: Put this in a config
 }
 function setImage(name){
-    console.log(name);
-    $("#carousel-image-slide").attr("src", "/images/"+name);
+    $("#carousel-image-slide").attr("src", "/images/"+name); // TODO: Put target in a config file
 }
