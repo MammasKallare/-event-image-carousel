@@ -6,7 +6,7 @@ $(document).ready(function(){
     $.ajax({
         cache:      false,
         dataType:   "json",
-        url:        "/sounds", // TODO: Place in config
+        url:        carouselConfig.sounds.url,
         statusCode: {
             404: function() {
                 console.log("404: Could not fetch list of sound files");
@@ -15,19 +15,15 @@ $(document).ready(function(){
     })
     .done(function(data){
         $.each(data, function(i,j){
-            soundList.push(new Audio("/sounds" + "/" + j.name)) // TODO: Place in config
-            //soundList["test"] = as;
+            soundList.push(new Audio(carouselConfig.sounds.url + "/" + j.name))
         });
         console.log("All sound files fetched");
     });
 
     $(document).on("keypress", function (e) {
-    // use e.which
-    if(e.which === 104){
-        console.log(soundList);
-        soundList[0].play();
-        //soundList["test"].play();
-    }
+        if(e.which === 104){
+            console.log(soundList);
+            soundList[0].play();
+        }
+    });
 });
-});
-//audio.play();
